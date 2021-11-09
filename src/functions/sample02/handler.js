@@ -1,6 +1,10 @@
+/**
+ * DynamoDBの登録/更新/削除で起動するLambdaサンプル
+ */
+
 'use strict';
 
-module.exports.moshimoshi = async event => {
+module.exports.sample02 = async event => {
 
   event.Records.forEach((record) => {
     console.log('イベント種別:', record.eventName);
@@ -29,8 +33,6 @@ module.exports.moshimoshi = async event => {
       "StreamViewType": "NEW_IMAGE"
     }
 */
-
-
 
     if (record.eventName == 'INSERT') {
       //項目が追加された時の処理
